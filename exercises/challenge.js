@@ -54,7 +54,7 @@ const ATCQueue = function () {
 
 ATCQueue.prototype.aircraftCount = function () {
 // this function will count the number of aircraft 
-    return this.aircraftQueue.length
+    return this.aircraftQueue.length 
     // this function will return the number of air craft from the que from the array
 }
 
@@ -64,9 +64,9 @@ this.aircraftQueue.push(aircraft)
 // this function will push a new aircraft to the array everytime
 }
 
-ATCQueue.prototype.dequeue = function () {
+ATCQueue.prototype.dequeue = function (aircarft) {
     // aircrafts are dequeued
-    // find the first aircraft/index 0 from the array with the type and size -find()
+    // find the first aircraft/index 0 from the array with the type and size 
     // return aircraft  if aircraft type and size === 'passenger' and 'large'
     // return aircraft  if aircraft type and size === 'passenger' and 'small'
     // return aircraft  if aircraft type and size === 'cargo' and 'small'
@@ -76,7 +76,14 @@ ATCQueue.prototype.dequeue = function () {
         // big cargo, small passenger
         // small cargo
         //  big cargo
-    // then we get this we will remove these aircrafts using pop()
+    // then we get this we will remove these aircrafts using - pop()
+    let index =  0
+    let firstAirCraft = this.aircraftQueue[index]
+    
+    if(firstAirCraft) {
+        return aircraft.type === 'passenger' && aircraft.size === 'large'
+    }
+
 }
 
 // DO NOT MODIFY
